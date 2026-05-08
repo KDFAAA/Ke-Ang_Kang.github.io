@@ -1,0 +1,539 @@
+// ==================================================
+// Custom Styles - Black-Gray + Deep Blue Theme
+// Based on target blog analysis
+// ==================================================
+
+// ---------- Header Brand Container ----------
+.site-brand-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #1a56db 100%);
+}
+
+// ---------- Site Title & Subtitle ----------
+.site-title {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.site-subtitle {
+  color: rgba(255, 255, 255, .75);
+}
+
+// ---------- Menu Active Indicator ----------
+if (hexo-config('scheme') == 'Gemini') {
+  .main-menu .menu-item-active::after {
+    content: " ";
+    background: #1a56db;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+  }
+}
+
+// ---------- Sidebar Toggle Button (Mobile) ----------
+.sidebar-toggle {
+  background: #1a1a2e;
+  border-radius: 4px;
+}
+
+.sidebar-toggle:hover .toggle-line {
+  background: #1a56db;
+}
+
+// ---------- Sidebar Panel Animation ----------
+.sidebar-panel {
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+// ---------- Post Blocks - Card Style ----------
+.post-block {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.post-block + .post-block {
+  margin-top: 12px;
+}
+
+// ---------- Post Title Link ----------
+.posts-expand .post-title-link {
+  color: var(--link-color);
+  transition: color .2s ease-in-out;
+}
+
+.posts-expand .post-title-link:hover {
+  color: var(--link-hover-color);
+}
+
+// ---------- Post Meta ----------
+.post-meta {
+  color: #5a6c7d;
+  font-size: .875em;
+}
+
+.post-meta-item {
+  margin-right: 15px;
+}
+
+// ---------- Code Blocks - macOS Style ----------
+figure.highlight {
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
+  margin: 0 auto 25px;
+
+  &::before {
+    content: " ";
+    background: #ff5f56;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1;
+  }
+
+  .gutter pre {
+    padding-top: 30px;
+  }
+
+  .code pre {
+    padding-top: 30px;
+  }
+
+  table, .table-container {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+// Code block copy button
+.copy-btn {
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  background: rgba(0, 0, 0, .05);
+  border: none;
+}
+
+figure.highlight:hover .copy-btn {
+  opacity: 1;
+}
+
+.copy-btn:hover {
+  background: rgba(0, 0, 0, .1);
+}
+
+// Inline code
+code {
+  background: var(--card-bg-color);
+  color: #1a56db;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: .875em;
+}
+
+// ---------- Headings ----------
+.post-body {
+  h1, h2 {
+    border-bottom: 1px solid #d1d9e6;
+    padding-bottom: 8px;
+    margin-top: 40px;
+  }
+
+  h3 {
+    border-bottom: 1px dotted #d1d9e6;
+    padding-bottom: 6px;
+  }
+}
+
+// ---------- Blockquote ----------
+blockquote {
+  border-left: 4px solid #1a56db;
+  background: #f8f9fb;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 20px;
+  margin: 20px 0;
+  color: var(--text-color);
+}
+
+// ---------- Link Styles ----------
+.post-body p > a {
+  border-bottom: 1px solid rgba(26, 86, 219, .3);
+  transition: border-bottom-color .2s ease-in-out, color .2s ease-in-out;
+
+  &:hover {
+    border-bottom-color: var(--link-hover-color);
+    color: var(--link-hover-color);
+  }
+}
+
+// ---------- Table ----------
+table {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+}
+
+th {
+  background: #1a1a2e;
+  color: #ffffff;
+}
+
+// ---------- Pagination ----------
+.pagination {
+  .page-number.current {
+    background: #1a56db;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .prev, .next, .page-number {
+    border-radius: 4px;
+    transition: background .2s ease-in-out, color .2s ease-in-out;
+  }
+
+  .prev:hover, .next:hover, .page-number:hover {
+    background: rgba(26, 86, 219, .1);
+  }
+}
+
+// ---------- Footer ----------
+.footer {
+  color: #5a6c7d;
+
+  .with-love {
+    color: #1a56db;
+  }
+}
+
+// ---------- Scrollbar ----------
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c9d6;
+  border-radius: 4px;
+
+  &:hover {
+    background: #a0aab8;
+  }
+}
+
+// ---------- Selection ----------
+::selection {
+  background: rgba(26, 86, 219, .2);
+  color: var(--text-color);
+}
+
+// ---------- Note Tags ----------
+.post-body .note {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+// ---------- Back to Top Button ----------
+.back-to-top {
+  background: #1a56db;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(26, 86, 219, .3);
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(26, 86, 219, .4);
+  }
+
+  .back-to-top-text {
+    display: none;
+  }
+}
+
+// ---------- Reading Progress Bar ----------
+.reading-progress-bar {
+  background: #1a56db;
+}
+
+// ---------- Sidebar Social Icons ----------
+.links-of-author-item a {
+  color: #5a6c7d;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: color .2s ease-in-out, background .2s ease-in-out;
+  font-size: 1.2em;
+
+  &:hover {
+    color: #1a56db;
+    background: rgba(26, 86, 219, .08);
+  }
+}
+
+// ---------- Site State Items ----------
+.site-state-item {
+  transition: color .2s ease-in-out;
+
+  a {
+    border-bottom: none;
+  }
+
+  &:hover .site-state-item-count {
+    color: #1a56db;
+  }
+}
+
+// ---------- Responsive: Mobile Sidebar ----------
+@media (max-width: 991px) {
+  .sidebar {
+    background: #1a1a2e;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, .3);
+
+    a {
+      color: #8b949e;
+      border-bottom-color: #30363d;
+
+      &:hover {
+        color: #58a6ff;
+        border-bottom-color: #58a6ff;
+      }
+    }
+
+    .site-author-name {
+      color: #e6edf3;
+    }
+
+    .site-description {
+      color: #8b949e;
+    }
+
+    .site-state-item-name {
+      color: #8b949e;
+    }
+
+    .site-state-item-count {
+      color: #e6edf3;
+    }
+
+    .links-of-author-item a {
+      color: #8b949e;
+
+      &::before {
+        content: " ";
+        background: #1a56db;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        margin-right: 5px;
+        display: inline-block;
+        transform: translateY(-2px);
+      }
+
+      &:hover {
+        color: #58a6ff;
+        background: rgba(88, 166, 255, .1);
+      }
+    }
+
+    .links-of-blogroll-item a {
+      color: #8b949e;
+
+      &:hover {
+        color: #58a6ff;
+      }
+    }
+
+    .sidebar-nav li:hover {
+      color: #1a56db;
+    }
+
+    .sidebar-toc-active .sidebar-nav-toc,
+    .sidebar-overview-active .sidebar-nav-overview {
+      color: #1a56db;
+      border-bottom-color: #1a56db;
+    }
+
+    .post-toc .nav .active > a {
+      color: #1a56db;
+      border-bottom-color: #1a56db;
+    }
+
+    .post-toc .nav .active-current > a {
+      color: #1a56db;
+    }
+
+    .sidebar-button button {
+      color: #58a6ff;
+      border-color: #1a56db;
+
+      &:hover {
+        background: #1a56db;
+        color: #fff;
+      }
+    }
+  }
+
+  .sidebar-dimmer {
+    background: rgba(0, 0, 0, .6);
+  }
+
+  .sidebar-toggle {
+    background: #1a1a2e;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  body.sidebar-active .sidebar-toggle .toggle-line {
+    background: #1a56db;
+  }
+}
+
+// ---------- Post End Of File ----------
+.post-eof {
+  display: none;
+}
+
+// ---------- Tags / Categories Page ----------
+.tag-cloud a {
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: #1a56db !important;
+  }
+}
+
+.category-list-link {
+  &:hover {
+    color: #1a56db !important;
+  }
+}
+
+// ---------- Post Navigation ----------
+.post-nav-item a {
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: #1a56db;
+  }
+}
+
+// ---------- Comment Area ----------
+.comments {
+  border-radius: 8px;
+}
+
+// ---------- Related Posts ----------
+.popular-posts .popular-posts-item .popular-posts-link:hover {
+  color: #1a56db;
+}
+
+// ---------- Smooth Transitions ----------
+a, button, .btn {
+  transition: all .2s ease-in-out;
+}
+
+// ---------- Image Zoom ----------
+img {
+  border-radius: 6px;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .1);
+  }
+}
+
+// ---------- Pre / Kbd ----------
+kbd {
+  background: var(--card-bg-color);
+  border: 1px solid #d1d9e6;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: .85em;
+  box-shadow: 0 1px 0 #d1d9e6;
+}
+
+// ---------- Blockquote-Center ----------
+.blockquote-center {
+  &::before, &::after {
+    color: #1a56db;
+    opacity: .4;
+  }
+}
+
+// ---------- Dark Mode Overrides ----------
+@media (prefers-color-scheme: dark) {
+  .site-brand-container {
+    background: linear-gradient(135deg, #0d1117 0%, #1a56db 100%);
+  }
+
+  figure.highlight {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .4);
+  }
+
+  blockquote {
+    background: rgba(26, 86, 219, .05);
+    border-left-color: #1a56db;
+  }
+
+  code {
+    background: rgba(26, 86, 219, .15);
+    color: #79c0ff;
+  }
+
+  .post-body {
+    h1, h2 {
+      border-bottom-color: #30363d;
+    }
+
+    h3 {
+      border-bottom-color: #30363d;
+    }
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #30363d;
+
+    &:hover {
+      background: #484f58;
+    }
+  }
+
+  .back-to-top {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+  }
+}
+
+// ---------- Print Styles ----------
+@media print {
+  .sidebar, .header, .footer, .back-to-top, .reading-progress-bar {
+    display: none !important;
+  }
+
+  .main-inner {
+    width: 100%;
+  }
+}

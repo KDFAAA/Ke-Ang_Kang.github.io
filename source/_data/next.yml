@@ -1,0 +1,317 @@
+# ---------------------------------------------------------------
+# NexT Theme Data File - Override Configuration
+# Based on target blog analysis | Gemini Scheme
+# ---------------------------------------------------------------
+
+# Core Settings
+cache:
+  enable: true
+
+minify: false
+
+# Custom file paths - enable all custom files
+custom_file_path:
+  style: source/_data/styles.styl
+  variable: source/_data/variables.styl
+
+# ---------------------------------------------------------------
+# Site Information
+# ---------------------------------------------------------------
+
+favicon:
+  small: /images/favicon-16x16-next.png
+  medium: /images/favicon-32x32-next.png
+  apple_touch_icon: /images/apple-touch-icon-next.png
+  safari_pinned_tab: /images/logo.svg
+
+footer:
+  icon:
+    name: fa fa-heart
+    animated: true
+    color: "#1a56db"
+  copyright:
+  powered: true
+  beian:
+    enable: false
+
+creative_commons:
+  license: by-nc-sa
+  sidebar: true
+  post: false
+  language: deed.zh
+
+# ---------------------------------------------------------------
+# Scheme
+# ---------------------------------------------------------------
+
+scheme: Gemini
+
+# ---------------------------------------------------------------
+# Dark Mode - Enabled
+# ---------------------------------------------------------------
+
+darkmode: true
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+  #about: /about/ || fa fa-user
+  #schedule: /schedule/ || fa fa-calendar
+  #commonweal: /404/ || fa fa-heartbeat
+
+menu_settings:
+  icons: true
+  badges: false
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+
+sidebar:
+  position: left
+  display: post
+  padding: 18
+  offset: 12
+  onmobile: false
+
+avatar:
+  url: /images/avatar.gif
+  rounded: true
+  rotated: false
+
+site_state: true
+
+# Social Links
+social:
+  GitHub: https://github.com/ || fab fa-github
+  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  #Weibo: https://weibo.com/ || fab fa-weibo
+  #Twitter: https://twitter.com/ || fab fa-twitter
+
+social_icons:
+  enable: true
+  icons_only: true
+  transition: false
+
+# Blog rolls / Friend links
+links_settings:
+  icon: fa fa-globe
+  title: Links
+  layout: block
+
+links:
+  #Example: https://example.com
+
+# Table of Contents
+toc:
+  enable: true
+  number: true
+  wrap: false
+  expand_all: false
+  max_depth: 6
+
+# ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+
+excerpt_description: true
+
+read_more_btn: true
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: false
+
+tag_icon: false
+
+reward_settings:
+  enable: false
+
+related_posts:
+  enable: false
+
+post_edit:
+  enable: false
+
+post_navigation: left
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+text_align:
+  desktop: justify
+  mobile: justify
+
+mobile_layout_economy: false
+
+android_chrome_color: "#1a1a2e"
+
+codeblock:
+  highlight_theme: normal
+  copy_button:
+    enable: true
+    show_result: true
+    style: mac
+
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+reading_progress:
+  enable: true
+  position: top
+  color: "#1a56db"
+  height: 3px
+
+bookmark:
+  enable: false
+
+github_banner:
+  enable: false
+
+# ---------------------------------------------------------------
+# Font Settings
+# ---------------------------------------------------------------
+
+font:
+  enable: false
+  host:
+
+  global:
+    external: true
+    family: Lato
+    size:
+
+  title:
+    external: true
+    family:
+    size:
+
+  headings:
+    external: true
+    family:
+    size:
+
+  posts:
+    external: true
+    family:
+
+  codes:
+    external: true
+    family: JetBrains Mono
+
+# ---------------------------------------------------------------
+# SEO Settings
+# ---------------------------------------------------------------
+
+index_with_subtitle: true
+
+exturl: false
+
+# ---------------------------------------------------------------
+# Third Party Services
+# ---------------------------------------------------------------
+
+pjax: false
+
+fancybox: false
+
+mediumzoom: true
+
+lazyload: false
+
+pangu: false
+
+quicklink:
+  enable: false
+
+# ---------------------------------------------------------------
+# Comments
+# ---------------------------------------------------------------
+
+comments:
+  style: tabs
+  active:
+  storage: true
+  lazyload: false
+
+disqus:
+  enable: false
+
+valine:
+  enable: false
+
+gitalk:
+  enable: false
+
+# ---------------------------------------------------------------
+# Statistics
+# ---------------------------------------------------------------
+
+busuanzi_count:
+  enable: false
+
+leancloud_visitors:
+  enable: false
+
+# ---------------------------------------------------------------
+# Search
+# ---------------------------------------------------------------
+
+local_search:
+  enable: false
+
+algolia_search:
+  enable: false
+
+# ---------------------------------------------------------------
+# Animation
+# ---------------------------------------------------------------
+
+motion:
+  enable: true
+  async: false
+  transition:
+    post_block: fadeIn
+    post_header: slideDownIn
+    post_body: slideDownIn
+    coll_header: slideLeftIn
+    sidebar: slideUpIn
+
+pace:
+  enable: false
+
+three:
+  enable: false
+
+canvas_ribbon:
+  enable: false
+
+# ---------------------------------------------------------------
+# Note/Tag Settings
+# ---------------------------------------------------------------
+
+note:
+  style: simple
+  icons: false
+  light_bg_offset: 0
+
+mermaid:
+  enable: false

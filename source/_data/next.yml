@@ -154,6 +154,9 @@ post_navigation: left
 # Misc Theme Settings
 # ---------------------------------------------------------------
 
+# Custom Logo
+custom_logo: /images/logo-noboard.png
+
 text_align:
   desktop: justify
   mobile: justify

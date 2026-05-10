@@ -18,6 +18,9 @@
 
     <a href="{{ config.root }}" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
+      {%- if theme.custom_logo %}
+        <img class="site-header-logo" src="{{ theme.custom_logo }}" alt="{{ title }}">
+      {%- endif %}
       <h1 class="site-title">{{ title }}</h1>
       <span class="logo-line-after"><i></i></span>
     </a>

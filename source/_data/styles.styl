@@ -8,10 +8,55 @@
   background: linear-gradient(135deg, #1a1a2e 0%, #1a56db 100%);
 }
 
+// ---------- Brand Flex: Logo + Title ----------
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+
+  .logo-line-before,
+  .logo-line-after {
+    display: none;
+  }
+}
+
+.site-header-logo {
+  display: inline-block;
+  height: 36px;
+  width: auto;
+  margin: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+// Hide default Gemini custom_logo placed below the brand
+.site-meta.custom-logo > a > .custom-logo-image {
+  display: none;
+}
+
 // ---------- Site Title & Subtitle ----------
 .site-title {
   font-weight: 600;
   letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+// ---------- Responsive: Compact header on mobile ----------
+@media (max-width: 767px) {
+  .brand {
+    gap: 6px;
+    padding: 0 10px;
+  }
+
+  .site-header-logo {
+    height: 28px;
+  }
+
+  .site-title {
+    font-size: 1.1em;
+  }
 }
 
 .site-subtitle {
